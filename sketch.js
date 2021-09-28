@@ -161,3 +161,10 @@ function test() {
   mySound.play();
   console.log("ahahahahhah");
 }
+
+//function movingSquare() {
+//fill("rebeccaPurple");
+//square(frameCount * 8, 0, 20);
+//square(windowWidth, frameCount * 8, 20);
+//square(0, frameCount * 8, 20);
+//square(frameCount * 8, windowHeight, 20);}
