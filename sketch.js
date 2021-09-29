@@ -1,31 +1,7 @@
-//preload suono (con correzioni)
-let mySound;
-function onSoundLoadSuccess(e) {
-  console.log("load sound success", e);
-}
-function onSoundLoadError(e) {
-  console.log("load sound error", e);
-}
-function onSoundLoadProgress(e) {
-  console.log("load sound progress", e);
-}
-function preload() {
-  soundFormats("mp3", "ogg");
-  mySound = loadSound(
-    "assets/scarySound.mp3",
-    onSoundLoadSuccess,
-    onSoundLoadError,
-    onSoundLoadProgress
-  );
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
   rectMode(CENTER);
-
-  mySound.setVolume(1);
-  test();
 
   //gradient background
   background("220");
@@ -146,25 +122,9 @@ function rotatingSpiral() {
 let hp2 = 1;
 let hp = 1;
 function movingSquare() {
-  fill("rebeccaPurple");
-  square(20 * hp, 0, 20);
-  square(20 * hp, windowHeight, 20);
-
   fill("yellow");
   square(20 * hp2, 0, 20);
   square(20 * hp2, windowHeight, 20);
   hp = hp + 2;
   hp2 = hp2 + 2;
 }
-
-function test() {
-  mySound.play();
-  console.log("ahahahahhah");
-}
-
-//function movingSquare() {
-//fill("rebeccaPurple");
-//square(frameCount * 8, 0, 20);
-//square(windowWidth, frameCount * 8, 20);
-//square(0, frameCount * 8, 20);
-//square(frameCount * 8, windowHeight, 20);}
